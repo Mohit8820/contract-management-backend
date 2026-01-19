@@ -23,6 +23,7 @@ const ContractSchema = new mongoose.Schema({
     default: "CREATED",
   },
   history: [StatusHistorySchema],
+  createdDate: Date,
 });
 
 export default mongoose.model("Contract", ContractSchema);

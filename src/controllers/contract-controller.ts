@@ -35,6 +35,7 @@ export const createFromBlueprint = async (req, res) => {
     blueprintName: bp.name,
     fields: bp.fields.map((f) => ({ ...f.toObject(), value: "" })),
     history: [{ status: "CREATED" }],
+    createdDate: new Date(),
   });
 
   res.status(201).json(withId(contract));
